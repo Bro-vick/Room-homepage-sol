@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room homepage | Frontend Mentor Challenge</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="font-leagueSpartan relative">
+    <header class="absolute z-10 w-full py-10 md:py-12 p-12 flex items-center gap-14 text-white justify-center md:justify-start">
+        <button class="absolute left-10 md:hidden" onclick="openNav()">
+            <img src="/images/icon-hamburger.svg" alt="">
+        </button>
+        <div>
+            <img src="/images/logo.svg" alt="">
+        </div>
+        <nav class="hidden md:block w-full text-lg">
+            <ul class="flex gap-6">
+                <li class="list-none"><a href="#" class="navlink">home</a></li>
+                <li class="list-none"><a href="#" class="navlink">shop</a></li>
+                <li class="list-none"><a href="#" class="navlink">about</a></li>
+                <li class="list-none"><a href="#" class="navlink">contact</a></li>
+            </ul>
+        </nav>
+        <nav class="fixed top-0 md:hidden w-full hidden" id="mobile-nav">
+            <div class="fixed w-full h-[100rem] backdrop-brightness-[0.4]">
+                <div class="z-20 top-0 left-0 w-full h-24 flex items-center gap-8 xs:gap-10 px-6 xs:px-10 bg-white text-lg">
+                    <button onclick="closeNav()">
+                        <img src="/images/icon-close.svg" class="min-w-4" alt="">
+                    </button>
+                    <ul class="flex gap-3 xs:gap-4 sm:gap-6 text-base xs:text-lg text-veryDarkGrey">
+                        <li class="list-none"><a href="#" class="navlink">home</a></li>
+                        <li class="list-none"><a href="#" class="navlink">shop</a></li>
+                        <li class="list-none"><a href="#" class="navlink">about</a></li>
+                        <li class="list-none"><a href="#" class="navlink">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="">
+        <div class="w-full flex flex-col desktop:flex-row">
+            <div class="w-full desktop:w-7/12 relative">
+                <div>
+                    <img 
+                        src="/images/desktop-image-hero-1.jpg"
+                        alt="home table"
+                        class="w-full"
+                        id="hero-img"
+                    >
+                </div>
+                <div class="w-[19.4%] absolute bottom-0 right-0 desktop:-right-[19.4%] flex">
+                    <button
+                        class="w-6/12 flex py-4 lg:py-6 justify-center bg-black hover:bg-veryDarkGrey cursor-pointer"
+                        onclick="previous()"
+                        >
+                        <img 
+                            src="/images/icon-angle-left.svg" 
+                            alt="left"
+                            class="w-3"
+                        >
+                    </button>
+                    <button 
+                        class="w-6/12 flex py-4 lg:py-6 justify-center bg-black hover:bg-veryDarkGrey cursor-pointer"
+                        onclick="next()"
+                    >
+                        <img 
+                            src="/images/icon-angle-right.svg" 
+                            alt="right"
+                            class="w-3"
+                        >
+                    </button>
+                </div>
+            </div>
+            <div class="desktop:w-5/12 flex flex-col justify-center gap-4 px-8 py-10 desktop:py-0 desktop:px-[6%] desktop:pb-2">
+                <h1 class="text-3xl desktop:text-[2.6rem] leading-7 font-bold desktop:leading-10" id="cta-heading">
+                    Discover innovative ways to decorate
+                </h1>
+                <p class="text-[15px] text-veryDarkGrey font-medium" id="cta-paragraph">
+                    We provide unmatched quality, comfort, and style for property owners across the country. 
+                    Our experts combine form and function in bringing your vision to life. Create a room in your 
+                    own style with our collection and make your property a reflection of you and what you love.
+                </p>
+                <div class="flex items-center gap-4 hover:gap-5 hover:text-darkGrey cursor-pointer">
+                    <div class="pt-1 tracking-[0.6rem] font-medium">
+                        SHOP NOW
+                    </div>
+                    <img 
+                        src="/images/icon-arrow.svg" 
+                        alt="arrrow icon"
+                        class="h-3"
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row">
+            <div class="w-full lg:w-[29.1%]">
+                <img src="/images/image-about-dark.jpg" alt="about dark" class="w-full">
+            </div>
+            <div class="lg:w-[40.5%] flex flex-col justify-center gap-3 px-8 py-10 lg:px-10 lg:py-0">
+                <h2 class="text-[15px] font-bold tracking-[0.35rem]">
+                    ABOUT OUR FURNITURE
+                </h2>
+                <p class="text-[14px] text-veryDarkGrey font-medium">
+                    Our multifunctional collection blends design and function to suit your individual taste.
+                    Make each room unique, or pick a cohesive theme that best express your interests and what
+                    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                    or anything in between. Product specialists are available to help you create your dream space.
+                </p>
+            </div>
+            <div class="lg:w-[30.4%]">
+                <img src="/images/image-about-light.jpg" alt="" class="w-full">
+            </div>
+        </div>
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+</html>
