@@ -15,7 +15,7 @@ const length = 3;
 
 // change image for smaller screens - runs initially
 if(width < 640){
-    heroImg.src = "/images/mobile-image-hero-1.jpg";
+    heroImg.src = "./images/mobile-image-hero-1.jpg";
 }
 
 let resizeTimeout;
@@ -72,14 +72,14 @@ const closeNav = () => {
 
 // image-text datas
 const desktopHeroImages = [
-    "/images/desktop-image-hero-1.jpg",
-    "/images/desktop-image-hero-2.jpg",
-    "/images/desktop-image-hero-3.jpg"
+    "./images/desktop-image-hero-1.jpg",
+    "./images/desktop-image-hero-2.jpg",
+    "./images/desktop-image-hero-3.jpg"
 ]
 const mobileHeroImages = [
-    "/images/mobile-image-hero-1.jpg",
-    "/images/mobile-image-hero-2.jpg",
-    "/images/mobile-image-hero-3.jpg"
+    "./images/mobile-image-hero-1.jpg",
+    "./images/mobile-image-hero-2.jpg",
+    "./images/mobile-image-hero-3.jpg"
 ]
 const headingTexts = [
     "Discover innovative ways to decorate",
